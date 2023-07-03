@@ -32,7 +32,7 @@ def get_filters():
           city = input("Invalid input. Would you like to see data for Chicago, New York, or Washington?\n")
     print()
     print()
-    # TO DO: get user input for month (all, january, february, ... , june)
+    # TO DO: prompt user to input month (all, january, february, ... , june) till expected input is received
     day_or_month = input('Would you like to filter the data by month, day, or not at all? Type "none" for no time filter\n')
     while True:
         if day_or_month.lower() == "month":
