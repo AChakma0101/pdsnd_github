@@ -228,8 +228,7 @@ def station_stats(df):
     df = df.groupby(['Start Station','End Station']).size().reset_index().rename(columns={0:'count'})
     df = df[df['count'] == df['count'].max()]
     print(df.to_string(index=False))
-    #print(df.loc[1:])
-    #df[df["Courses"] == 'Spark']
+    
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -270,7 +269,7 @@ def user_stats(df):
     print('\nCalculating User Stats...\n')
     start_time = time.time()
 
-    # TO DO: Display counts of user types
+    # TO DO: display counts of user types
     print("Here's the breakup of bikeshare user types:")
     print(df['User Type'].value_counts())
     
@@ -280,7 +279,7 @@ def user_stats(df):
     print()
     print()
 
-    # TO DO: Display counts of gender
+    # TO DO: display counts of gender
     start_time = time.time()
     if 'Gender' in df.columns:
         print("Here's the available counts of gender:")
