@@ -228,8 +228,7 @@ def station_stats(df):
     df = df.groupby(['Start Station','End Station']).size().reset_index().rename(columns={0:'count'})
     df = df[df['count'] == df['count'].max()]
     print(df.to_string(index=False))
-    #print(df.loc[1:])
-    #df[df["Courses"] == 'Spark']
+    
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
